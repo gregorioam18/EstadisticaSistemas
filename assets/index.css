@@ -1,36 +1,59 @@
+/* assets/index.css */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f4f6f8;
+    background: linear-gradient(to right, #e6f0ff, #ffffff);
     color: #333;
-}
-
-header {
-    background-color: #004d99;
+  }
+  
+  header {
+    background-color: #003366;
     color: white;
-    padding: 2rem;
     text-align: center;
-}
-
-h1 {
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
     margin: 0;
-}
-
-.contenido {
-    max-width: 800px;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .contenido {
+    max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
-}
-
-.tarjeta {
+  }
+  
+  .tarjeta {
     background-color: white;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta h2 {
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border-left: 6px solid #003366;
+  }
+  
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    background-color: #f9fbff;
+  }
+  
+  .tarjeta h2 {
     margin-top: 0;
-    color: #004d99;
-}
+    color: #003366;
+  }
+  
+  .tarjeta p {
+    margin-bottom: 0;
+    color: #555;
+  }
+  
