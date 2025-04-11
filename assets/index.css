@@ -1,4 +1,4 @@
-/* assets/index.css */
+/* Estilos generales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -30,21 +30,41 @@ body {
     padding: 0 1rem;
   }
   
+  /* Estilo de las tarjetas */
   .tarjeta {
     background-color: white;
     border-radius: 16px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s ease;
     cursor: pointer;
     border-left: 6px solid #003366;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tarjeta::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #003366;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
   .tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    background-color: #f9fbff;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+  }
+  
+  .tarjeta:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(5px);
   }
   
   .tarjeta h2 {
