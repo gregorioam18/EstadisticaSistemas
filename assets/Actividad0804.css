@@ -91,3 +91,39 @@ p {
     padding: 1rem;
   }
 }
+
+
+#fl-layout-wrapper-outer {
+  margin: 2em 0; /* Add some space around the chart */
+}
+.respuestas {
+  margin-top: 2em; /* Add space above the answers section */
+  padding: 1.5em;
+  background-color: #f9f9f9; /* Light background for distinction */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.respuestas h2 {
+  margin-top: 0;
+  color: #003366; /* Match header color from provided CSS */
+  border-bottom: 2px solid #003366; /* Match header color */
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.8rem; /* Match section h2 size */
+}
+.respuestas ol {
+  padding-left: 20px; /* Indent the list */
+}
+.respuestas li {
+  margin-bottom: 1em; /* Space between answers */
+  line-height: 1.6;
+}
+.respuestas li strong {
+  /* Optional: Style the number if needed */
+  font-weight: bold;
+  color: #003366;
+}
+/* Ensure chart font uses Montserrat if not specified by inline styles */
+#fl-layout-wrapper {
+  font-family: 'Montserrat', sans-serif;
+}
