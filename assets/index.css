@@ -15,8 +15,8 @@ header {
   padding: 2rem 1rem;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 header h1 {
@@ -106,12 +106,12 @@ footer {
   padding: 2rem 1rem;
   text-align: center;
   margin-top: 3rem;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 footer h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -124,8 +124,9 @@ footer ul {
 }
 
 footer li {
+  font-size: 0.7rem;
   margin: 0.4rem 0;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 /* Responsive */
