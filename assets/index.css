@@ -69,6 +69,36 @@ header p {
   font-weight: 300;
 }
 
+
+/* Tarjetas 2*/
+.tarjeta {
+  padding: 1.8rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;s
+  cursor: pointer;
+  border-left: 6px solid #2a9d8f;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #264653;
+  font-weight: 600;
+}
+
+.tarjeta p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
 /* Footer */
 footer {
   background-color: #2c3e50;
