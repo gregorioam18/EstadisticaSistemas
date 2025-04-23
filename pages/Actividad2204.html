@@ -3,77 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actividad: Explorando el mundo en burbujas</title>
-  <link rel="stylesheet" href="../assets/Actividad1104.css">
+  <title>Actividad: ¿Qué nos dicen los números sobre la concentración de NO₂?</title>
+  <link rel="stylesheet" href="../assets/Actividad2204.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Grupo 1 de Estadística</h1>
-    <p>✳️Actividad: Explorando el mundo en burbujas</p>
+    <p>✳️Actividad: ¿Qué nos dicen los números sobre la concentración de NO₂?</p>
   </header>
 
   <main class="contenido">
     <section class="consigna">
       <h2>Consigna</h2>
-      <p><strong>🎯Objetivo:</strong> Explorar relaciones entre variables mediante un análisis multivariado, utilizando la plataforma Gapminder y sus gráficos de burbujas dinámicos, que permiten visualizar datos en diferentes dimensiones a lo largo del tiempo.</p>
-
+      <p>Ya analizaron la concentración de NO₂ (μg/m³) con histogramas y gráficos de líneas. Ahora van a <strong>profundizar el análisis</strong> con medidas estadísticas que les permitan interpretar mejor el comportamiento de esta sustancia contaminante.</p>
       <ol>
-        <li>
-          <strong>1.Selección de variables</strong>
+        <li><strong>Apliquen</strong> la función <code>describe()</code> sobre la variable NO₂.</li>
+        <li><strong>Observen</strong> los valores obtenidos y escriban una breve interpretación para cada uno (excepto <em>std</em>, que se trabajará más adelante).</li>
+        <li><strong>Reflexionen en grupo:</strong>
           <ul>
-            <li>Seleccionen cuatro variables que consideren relevantes y potencialmente relacionadas (por ejemplo: ingreso per cápita, esperanza de vida, tasa de fertilidad, emisiones de CO₂, nivel educativo, población, etc.).</li>
-            <li>Indiquen de manera clara y precisa qué representa cada variable.</li>
-            <li>Expliquen por qué creen que pueden estar relacionadas.</li>
-            <li>Anticipen qué tipo de relación esperan encontrar entre ellas (directa, inversa, nula).</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>2.Análisis con Gapminder</strong>
-          <p>Usen el gráfico de burbujas de Gapminder para observar cómo evolucionan las variables seleccionadas a lo largo del tiempo. Recuerden que pueden ubicar: una variable en el eje X, otra en el eje Y, una tercera en el tamaño de las burbujas, una cuarta en el color de las burbujas.</p>
-          <p><strong>📌Importante:</strong> aunque el tiempo no se grafica como una variable, cumple un rol central al permitir observar la evolución dinámica de los datos. Por eso también debe ser tenido en cuenta en el análisis.</p>
-          <ul>
-            <li>¿Se evidencian relaciones entre las variables?</li>
-            <li>¿Se ajustan los datos a las relaciones esperadas?</li>
-            <li>¿Se detectan valores atípicos (outliers)? ¿Qué países se alejan del comportamiento general?</li>
-            <li>¿Qué patrones, tendencias o rupturas temporales llaman la atención?</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>3.Interpretación y reflexión</strong>
-          <ul>
-            <li>Expliquen qué relaciones encontraron (o no) entre las variables.</li>
-            <li>Propongan posibles explicaciones para los comportamientos observados.</li>
-            <li>Reflexionen sobre los valores atípicos: ¿qué factores podrían justificar que ciertos países se comporten de forma tan distinta?</li>
+            <li>¿Qué información aportan estas medidas sobre la distribución de NO₂?</li>
+            <li>¿Los valores indican niveles que podrían ser preocupantes para la salud o el ambiente?</li>
+            <li>¿Las medidas confirman lo que mostraban los gráficos? Justifiquen.</li>
           </ul>
         </li>
       </ol>
-
-      <p><strong>🧠Ideas clave para tener en cuenta:</strong></p>
-      <ul>
-        <li>La animación temporal permite enriquecer el análisis observando cambios a lo largo de los años.</li>
-        <li>Las burbujas representan países. Es posible comparar, filtrar y seleccionar países específicos para analizar con más detalle.</li>
-      </ul>
     </section>
 
     <section class="resolucion">
       <h2>Resolución</h2>
-      <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:172;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
-
-      <p><strong>Bebés por mujer, fertilidad total (eje Y):</strong><br>
-      Este es el número de hijos que nacerían de una mujer si viviera hasta el final de sus años fértiles y tuviera hijos de acuerdo con las tasas de fertilidad específicas por edad del año especificado. Expresa la tasa de fertilidad total del indicador estadístico.</p>
-
-      <p><strong>Mortalidad infantil (0-5 años de edad muriendo por cada 1000 nacidos) (eje X):</strong><br>
-      Muerte de niños menores de cinco años por cada 1.000 nacidos vivos.</p>
-
-      <p><strong>Porcentaje de niños de un año vacunados contra al menos una enfermedad:</strong><br>
-      Porcentaje de niños de un año que han recibido al menos una de las siguientes vacunas: BCG, DTP3, HepB3, HIB3, Sarampión 1ª, Sarampión 2ª, PCV3, Pol3 o RotaC. Aquí se muestra el número correspondiente a la vacuna con mayor cobertura.</p>
-
-      <p><strong>Población:</strong><br>
-      La población total cuenta el número de habitantes en el territorio.</p>
+      <ol>
+        <li>
+          <strong>Aplicación de <code>describe()</code>:</strong>
+          <p>Ejecutá el siguiente código para analizar la variable NO₂ usando Python:</p>
+          <iframe src="https://trinket.io/embed/python3/6cbb1a02e91e?start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        </li>
+        <li>
+          <strong>Interpretación de las medidas:</strong>
+          <p>Observá los valores de la tabla (excepto <code>std</code>, que se abordará más adelante) y escribí una breve interpretación de cada uno. Por ejemplo, ¿qué indica el valor medio? ¿Qué tan dispersos están los datos?</p>
+        </li>
+        <li>
+          <strong>Reflexión grupal:</strong>
+          <ul>
+            <li>¿Qué información aportan estas medidas sobre la distribución de NO₂?</li>
+            <li>¿Los valores indican niveles preocupantes para la salud o el ambiente?</li>
+            <li>¿Las medidas confirman lo que mostraban los gráficos? Justifiquen.</li>
+          </ul>
+        </li>
+      </ol>
     </section>
+    
   </main>
 </body>
 </html>
