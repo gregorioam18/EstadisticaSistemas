@@ -6,44 +6,46 @@
   <title>Grupo 1 de Estadística</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/index.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <div class="tarjeta2" onclick="redirigir('pages/Acta.html')">
-    <h1>Grupo 1 de Estadística</h1>
-    <p>Comisión A</p>
+      <h1><i class="fas fa-chart-line"></i> Grupo 1 de Estadística</h1>
+      <p>Comisión A</p>
     </div>
   </header>
 
-  <main class="contenido">
-    <div class="tarjeta" onclick="redirigir('pages/Actividad0404.html')">
-      <h2>Analizando el impacto del NO₂ en la calidad del aire de España (04-04)</h2>
-      <p>
-        En esta actividad, exploramos la relación entre el NO₂ y la calidad del aire en España.
-      </p>
-    </div>
-    
-    <div class="tarjeta" onclick="redirigir('pages/Actividad0804.html')">
-      <h2>📊 Analizando declaraciones públicas (08-04)</h2>
-      <p>
-        Evaluamos afirmaciones públicas mediante datos estadísticos y visuales para promover el pensamiento crítico.
-      </p>
+  <section class="buscador">
+    <input type="text" id="filtro" placeholder="Buscar actividad estadística..." oninput="filtrarActividades()" />
+  </section>
+
+  <main class="contenido" id="contenedor-actividades">
+    <div class="tarjeta">
+      <h2><i class="fas fa-smog"></i> Impacto del NO₂ en el aire (04-04)</h2>
+      <p>Exploramos la relación entre el NO₂ y la calidad del aire en España.</p>
     </div>
 
-    <div class="tarjeta" onclick="redirigir('pages/Actividad1104.html')">
-      <h2>✳️ Explorando el mundo en burbujas (11-04)</h2>
-      <p>
-        Relacionamos variables con análisis multivariado en Gapminder, visualizando datos dinámicos a lo largo del tiempo.
-      </p>
+    <div class="tarjeta">
+      <h2><i class="fas fa-chart-bar"></i> Declaraciones públicas (08-04)</h2>
+      <p>Evaluamos afirmaciones públicas mediante datos estadísticos y visuales.</p>
     </div>
 
-    <div class="tarjeta" onclick="redirigir('pages/Actividad2204.html')">
-      <h2>¿Qué nos dicen los números sobre la concentración de NO₂? (22-04)</h2>
-      <p>
-        Ya analizamos la concentracion de NO2 (...) con historigramass y graficos de lineas.
-      </p>
+    <div class="tarjeta">
+      <h2><i class="fas fa-globe-europe"></i> Mundo en burbujas (11-04)</h2>
+      <p>Análisis multivariado en Gapminder visualizando datos dinámicos.</p>
+    </div>
+
+    <div class="tarjeta">
+      <h2><i class="fas fa-database"></i> Concentración de NO₂ (22-04)</h2>
+      <p>Ya analizamos la concentración de NO₂ con histogramas y gráficos de líneas.</p>
     </div>
   </main>
+
+  <section class="sobre-nosotros">
+    <h2><i class="fas fa-users"></i> ¿Quiénes somos?</h2>
+    <p>Somos un equipo de estudiantes que usa la estadística para entender mejor el mundo. Nos apoyamos en visualizaciones claras y datos reales.</p>
+  </section>
 
   <footer>
     <h3>Integrantes</h3>
@@ -54,13 +56,27 @@
       <li>Delfin Valentin</li>
       <li>Mansilla Martin</li>
       <li>Martin, Gregorio</li>
-      <li>Pérez, Luciano<li>
+      <li>Pérez, Luciano</li>
     </ul>
+    <p>&copy; <span id="year"></span> Grupo 1 de Estadística</p>
   </footer>
 
   <script>
     function redirigir(url) {
       window.location.href = url;
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function filtrarActividades() {
+      const filtro = document.getElementById("filtro").value.toLowerCase();
+      const tarjetas = document.querySelectorAll(".tarjeta");
+
+      tarjetas.forEach((tarjeta) => {
+        const texto = tarjeta.innerText.toLowerCase();
+        tarjeta.style.display = texto.includes(filtro) ? "block" : "none";
+        tarjeta.style.opacity = texto.includes(filtro) ? 1 : 0;
+      });
     }
   </script>
 </body>
