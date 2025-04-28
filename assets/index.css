@@ -125,6 +125,26 @@ footer li {
   font-weight: 200;
 }
 
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #f8f9fb, #e8f0fc); /* mismo fondo que body */
+}
+
+/* Ajustes para que todo el contenido esté encima de las partículas */
+body {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
 /* Responsive */
 @media (max-width: 600px) {
   header h1 {
@@ -144,3 +164,5 @@ footer li {
     font-size: 1.1rem;
   }
 }
+
+
