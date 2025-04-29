@@ -5,6 +5,8 @@ body {
   padding: 0;
   background: linear-gradient(to right, #f8f9fb, #e8f0fc);
   color: #002B5B;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header */
