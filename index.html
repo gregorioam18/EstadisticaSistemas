@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grupo 1 de Estadística</title>
+
+  <!-- Fuente y Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/index.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- partículas.js -->
+
+  <!-- Font Awesome (sin CORS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-V9QcvjWhrWh0hBbPlKZgxTxHxy5WyFcczHkCj4sE3phXkpBMwZZ2ERudFgk6Fjx3+Gx8zvXx7I1xAl0Q8/zL9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-  <!-- Contenedor de partículas -->
+  <!-- Fondo de partículas -->
   <div id="particles-js"></div>
 
   <header>
@@ -85,77 +91,48 @@
       });
     }
 
-    // Inicializar partículas
-    particlesJS('particles-js', {
-      particles: {
-        number: {
-          value: 60,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: "#3a86ff"
-        },
-        shape: {
-          type: "circle",
-          stroke: {
-            width: 0,
-            color: "#000000"
-          }
-        },
-        opacity: {
-          value: 0.2,
-          random: true
-        },
-        size: {
-          value: 3,
-          random: true
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#3a86ff",
-          opacity: 0.1,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 1,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          attract: {
-            enable: false,
-          }
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: {
-            enable: true,
-            mode: "grab"
+    // Iniciar partículas
+    window.addEventListener('DOMContentLoaded', () => {
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 60,
+            density: { enable: true, value_area: 800 }
           },
-          onclick: {
-            enable: false
+          color: { value: "#3a86ff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.2, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#3a86ff",
+            opacity: 0.1,
+            width: 1
           },
-          resize: true
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            out_mode: "out"
+          }
         },
-        modes: {
-          grab: {
-            distance: 140,
-            line_linked: {
-              opacity: 0.3
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: { opacity: 0.3 }
             }
           }
-        }
-      },
-      retina_detect: true
+        },
+        retina_detect: true
+      });
     });
   </script>
-
 </body>
 </html>
