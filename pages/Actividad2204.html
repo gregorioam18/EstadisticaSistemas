@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actividad: ¿Qué nos dicen los números sobre la concentración de NO₂?</title>
   <link rel="stylesheet" href="../assets/Actividades.css">
+  <link rel="stylesheet" href="../assets/footer.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,12 +14,11 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="navbar-title">
-      <i class="fas fa-chart-line"></i>
-      <span>Grupo 1 de Estadística</span>
+      <span>📊 Grupo 1 de Estadística</span>
     </div>
     <nav class="navbar-nav">
       <a class="nav-link" href="home.html" title="Ir al Home">
-        <i class="fas fa-home"></i> Home
+        🏠 Home
       </a>
     </nav>
   </header>
@@ -76,19 +76,16 @@
 
     
   </main>
-  <footer>
-    <h3>Integrantes</h3>
-    <ul>
-      <li>Aquino Benjamin</li>
-      <li>Bravo Agustin</li>
-      <li>Coppes Matias</li>
-      <li>Delfin Valentin</li>
-      <li>Mansilla Martin</li>
-      <li>Martin, Gregorio</li>
-      <li>Pérez, Luciano</li>
-    </ul>
-    <p>&copy; <span id="year"></span> Grupo 1 de Estadística</p>
-  </footer>
+  
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('components/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
 
   
   <script>

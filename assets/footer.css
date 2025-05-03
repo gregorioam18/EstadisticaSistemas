@@ -1,0 +1,38 @@
+/* Footer */
+footer {
+    background-color: #002B5B;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 9rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  footer .integrantes {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.2rem 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 0.5rem;
+    justify-content: center;
+  }
+  
+  footer .center_name {
+    font-size: 0.75rem;
+    font-weight: 200;
+    margin: 0.6rem;
+  }
+  
+  footer li {
+    font-size: 0.75rem;
+    margin: 0.4rem 0;
+    font-weight: 200;
+  }
