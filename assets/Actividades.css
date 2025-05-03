@@ -1,11 +1,14 @@
+/* Importar la fuente Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos base */
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -113,7 +116,6 @@ iframe:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
   margin: 2rem 0;
 }
-
 
 /* Navbar */
 .navbar {
