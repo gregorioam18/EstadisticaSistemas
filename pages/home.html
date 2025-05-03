@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/index.css" />
 
-  <!-- Font Awesome (sin CORS) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-V9QcvjWhrWh0hBbPlKZgxTxHxy5WyFcczHkCj4sE3phXkpBMwZZ2ERudFgk6Fjx3+Gx8zvXx7I1xAl0Q8/zL9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Particles.js -->
@@ -20,34 +20,26 @@
   <!-- Fondo de partículas -->
   <div id="particles-js"></div>
 
-<header class="navbar">
-  <div class="navbar-logo">
-    <i class="fas fa-chart-line"></i>
-    <span>Grupo 1 de Estadística</span>
-  </div>
-  <nav class="navbar-links">
-    <a href="pages/Acta.html" title="Ir al Acta"><i class="fas fa-home"></i> Acta</a>
-  </nav>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-title">
+      <i class="fas fa-chart-line"></i>
+      <span>Grupo 1 de Estadística</span>
+    </div>
+    <nav class="navbar-nav">
+      <a class="nav-link" href="pages/Acta.html" title="Ir al Acta">
+        <i class="fas fa-home"></i> Acta
+      </a>
+    </nav>
+  </header>
 
-
+  <!-- Buscador -->
   <section class="buscador">
     <input type="text" id="filtro" placeholder="Buscar actividad estadística..." oninput="filtrarActividades()" />
   </section>
 
-
+  <!-- Contenido de tarjetas -->
   <main class="contenido" id="contenedor-actividades">
-    <!--
-    <div class="tarjeta" onclick="redirigir('pages/Actividad0404.html')">
-      <h2><i class="fas fa-smog"></i> Impacto del NO₂ en el aire (04-04)</h2>
-      <p>Exploramos la relación entre el NO₂ y la calidad del aire en España.</p>
-    </div>
-
-    <div class="tarjeta" onclick="redirigir('pages/Actividad0804.html')">
-      <h2><i class="fas fa-chart-bar"></i> Declaraciones públicas (08-04)</h2>
-      <p>Evaluamos afirmaciones públicas mediante datos estadísticos y visuales.</p>
-    </div>
-  -->
     <div class="tarjeta" onclick="redirigir('pages/Actividad1104.html')">
       <h2><i class="fas fa-globe-europe"></i> Mundo en burbujas (11-04)</h2>
       <p>Análisis multivariado en Gapminder visualizando datos dinámicos.</p>
@@ -59,11 +51,13 @@
     </div>
   </main>
 
+  <!-- Sobre Nosotros -->
   <section class="sobre-nosotros">
     <h2><i class="fas fa-users"></i> ¿Quiénes somos?</h2>
     <p>Somos un equipo de estudiantes que usa la estadística para entender mejor el mundo. Nos apoyamos en visualizaciones claras y datos reales.</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <h3>Integrantes</h3>
     <ul class="integrantes">
@@ -78,6 +72,7 @@
     <p>&copy; <span id="year"></span> Grupo 1 de Estadística</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
     function redirigir(url) {
       window.location.href = url;
