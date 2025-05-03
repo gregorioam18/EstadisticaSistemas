@@ -3,12 +3,13 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #002B5B, #00509D);
+  background: linear-gradient(135deg, #eaf4fb, #f0f7fd);
   color: #002B5B;
   position: relative;
   z-index: 1;
   min-height: 100vh;
 }
+
 
 /* Fondo de partículas */
 #particles-js {
