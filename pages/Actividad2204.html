@@ -30,30 +30,39 @@
       </ol>
     </section>
 
-    <section class="resolucion">
-      <h2>Resolución</h2>
-      <ol>
-        <li>
-          <strong>Aplicación de <code>describe()</code>:</strong>
-          <p>Ejecutá el siguiente código para analizar la variable NO₂ usando Python:</p>
-          <div class="iframe-wrapper">
-            <iframe src="https://trinket.io/embed/python3/6cbb1a02e91e?start=result" allowfullscreen></iframe>
-          </div>          
-        </li>
-        <li>
-          <strong>Interpretación de las medidas:</strong>
-          <p>Observá los valores de la tabla (excepto <code>std</code>, que se abordará más adelante) y escribí una breve interpretación de cada uno. Por ejemplo, ¿qué indica el valor medio? ¿Qué tan dispersos están los datos?</p>
-        </li>
-        <li>
-          <strong>Reflexión grupal:</strong>
-          <ul>
-            <li>¿Qué información aportan estas medidas sobre la distribución de NO₂?</li>
-            <li>¿Los valores indican niveles preocupantes para la salud o el ambiente?</li>
-            <li>¿Las medidas confirman lo que mostraban los gráficos? Justifiquen.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+<section class="resolucion">
+  <h2>Resolución</h2>
+  <ol>
+    <li>
+      <strong>Aplicación de <code>describe()</code>:</strong>
+      <p>Ejecutá el siguiente código para analizar la variable NO₂ usando Python:</p>
+      <div class="iframe-wrapper">
+        <iframe src="https://trinket.io/embed/python3/6cbb1a02e91e?start=result" allowfullscreen></iframe>
+      </div>          
+    </li>
+    <li>
+      <strong>Interpretación de las medidas:</strong>
+      <p>Observen los valores obtenidos y escriban una breve interpretación para cada uno (excepto <code>std</code>, que se trabajará más adelante).</p>
+      <ul>
+        <li><strong>count:</strong> Es la cantidad de datos que se toman en cuenta.</li>
+        <li><strong>mean:</strong> Es la media que indica que en promedio hay una concentración de 21.40 µg/m³ de NO₂.</li>
+        <li><strong>min:</strong> Es un mínimo establecido pero no el mínimo detectado.</li>
+        <li><strong>25%:</strong> Este cuartil indica que el 25% de las concentraciones medidas fueron iguales o menores a 8 µg/m³.</li>
+        <li><strong>50% (mediana):</strong> Indica que el 50% de las muestras dieron igual o menor que 16 µg/m³.</li>
+        <li><strong>75%:</strong> Señala que el 75% de las muestras dieron igual o menor que 29 µg/m³.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Reflexión grupal:</strong>
+      <ul>
+        <li><strong>a)</strong> Las medidas de dispersión nos permiten observar que la mayoría de las concentraciones de NO₂ se encuentran dentro del rango tolerable establecido por la Unión Europea (menos de 40 µg/m³), concentrándose principalmente en los primeros tres cuartiles. Esto indica una baja dispersión entre los valores más frecuentes.<br>Sin embargo, en el cuarto cuartil se observa una mayor dispersión, especialmente por la gran diferencia entre el percentil 75 y el valor máximo, lo que evidencia la presencia de valores atípicos. Estos valores extremos aumentan la dispersión general y deben ser considerados al interpretar la variabilidad de los datos.</li>
+        <li><strong>b)</strong> El nivel máximo tolerable es de aproximadamente 40 µg/m³. Al menos hasta el 75-80% de las concentraciones se encuentran por debajo de este límite, lo que sugiere que, en general, no se presentan niveles preocupantes para la salud o el ambiente.</li>
+        <li><strong>c)</strong> Sí, las medidas confirman lo que mostraban los gráficos. Las medidas, como se mencionó anteriormente, reflejan una gran acumulación de valores por debajo del límite tolerable (40 µg/m³), lo cual coincide con los gráficos que muestran esa concentración. Además, el hecho de que la media sea mayor que la mediana indica una asimetría positiva, lo que se interpreta en este contexto como una tendencia hacia la disminución de las concentraciones de NO₂.</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
     
   </main>
 </body>
