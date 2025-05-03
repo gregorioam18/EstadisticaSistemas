@@ -20,13 +20,16 @@
   <!-- Fondo de partículas -->
   <div id="particles-js"></div>
 
-  <header>
-    <div class="tarjeta2" onclick="redirigir('pages/Acta.html')">
-      <h1><i class="fas fa-chart-line"></i> Grupo 1 de Estadística</h1>
-      <p>Comisión A</p>
-      <p>➡️Acta⬅️</p>
-    </div>
-  </header>
+<header class="navbar">
+  <div class="navbar-logo">
+    <i class="fas fa-chart-line"></i>
+    <span>Grupo 1 de Estadística</span>
+  </div>
+  <nav class="navbar-links">
+    <a href="pages/Acta.html" title="Ir al Acta"><i class="fas fa-home"></i> Acta</a>
+  </nav>
+</header>
+
 
   <section class="buscador">
     <input type="text" id="filtro" placeholder="Buscar actividad estadística..." oninput="filtrarActividades()" />
