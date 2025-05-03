@@ -98,6 +98,38 @@ iframe:hover {
   margin: 2rem 0;
 }
 
+/* Footer */
+footer {
+  background-color: #002B5B;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+footer li {
+  font-size: 0.75rem;
+  margin: 0.4rem 0;
+  font-weight: 200;
+}
+
+
+
 /* Responsive */
 @media (max-width: 600px) {
   header h1 {
