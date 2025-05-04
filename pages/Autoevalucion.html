@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autoevaluaciones - GRUPO 1</title>
+  <link rel="stylesheet" href="../assets/Acta.css" />
+  <link rel="stylesheet" href="../assets/footer.css" />
+</head>
+<body>
+    
+  <header class="navbar">
+    <div class="navbar-title">
+      <i class="fas fa-chart-line"></i>
+      <span>📊 Grupo 1 de Estadística</span>
+    </div>
+    <nav class="navbar-nav">
+      <a class="nav-link" href="home.html" title="Ir al Home">
+        <i class="fas fa-home"></i> 🏠 Home
+      </a>
+    </nav>
+  </header>
+
+  <main class="timeline">
+    <!-- CONSIGNA -->
+    <div class="event" style="background-color: #f1f9ff; border-left: 6px solid #007acc;">
+      <div class="time">📌 Consigna</div>
+      <div class="content">
+        <p>Cada integrante debe responder cuatro preguntas clave. Esto permite evaluar la participación real de cada uno. Es fundamental ser honesto y reflexivo. <b>Máximo: una página por alumno.</b></p>
+        <ul style="padding-left: 2rem; margin-top: 1rem;">
+          <li>¿Qué aportaste al grupo?</li>
+          <li>¿En qué sentís que aprendiste más?</li>
+          <li>¿Cómo evaluás tu participación? (Alta / Media / Baja y justificación)</li>
+          <li>¿Qué se podría mejorar en el grupo?</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- AUTOEVALUACIONES -->
+
+    <!-- Luciano Pérez -->
+    <div class="event">
+      <div class="time">🧑‍💻 Pérez, Luciano Agustín</div>
+      <div class="content">
+        <p>Redacté las actas de varias reuniones (13/04 y 28/04), participé en la revisión teórica y consolidé la versión final del acta el 03/05, subiéndola al portfolio.</p>
+        <p>Aprendí sobre cómo organizar el trabajo grupal y redactar de forma clara y precisa, prestando atención a los detalles discutidos.</p>
+        <p>Evaluación: <b>Media/Alta</b>. Estuve presente en todas las reuniones y cumplí con las tareas asignadas con compromiso.</p>
+        <p>Mejoraría la organización en reuniones por Discord, ya que hablar en subgrupos dentro del mismo canal dificultaba la comunicación.</p>
+      </div>
+    </div>
+
+    <!-- Benjamin Aquino -->
+    <div class="event">
+      <div class="time">🧑‍💻 Aquino, Benjamín</div>
+      <div class="content">
+        <p>Aporté materiales complementarios, corregí errores, mejoré redacciones y verifiqué el cumplimiento de las consignas.</p>
+        <p>Aprendí a hacer revisiones críticas y a evaluar el trabajo en equipo desde una perspectiva objetiva y teórica.</p>
+        <p>Evaluación: <b>Media</b>. A pesar de mi compromiso, no pude involucrarme tanto en tareas técnicas.</p>
+        <p>Podríamos mejorar la asignación inicial de roles para tener una organización más clara desde el principio.</p>
+      </div>
+    </div>
+
+    <!-- Martín Mansilla -->
+    <div class="event">
+      <div class="time">🧑‍💻 Mansilla, Martín</div>
+      <div class="content">
+        <p>Tomé notas, asigné tareas, participé en las actividades prácticas y contribuí a la redacción del acta.</p>
+        <p>Aprendí sobre análisis de datos, detección de sesgos estadísticos y trabajo grupal.</p>
+        <p>Evaluación: <b>Media/Alta</b>. Participé en todas las reuniones y cumplí con las tareas asignadas.</p>
+        <p>Sugiero roles rotativos y reuniones más cortas, además de implementar un checklist para el seguimiento.</p>
+      </div>
+    </div>
+
+    <!-- Martín Gregorio -->
+    <div class="event">
+      <div class="time">🧑‍💻 Gregorio, Martín</div>
+      <div class="content">
+        <p>Tomé notas, revisé redacciones, propuse y comencé el portfolio en GitHub Pages, integrando Trinket, y diseñé esquemas gráficos.</p>
+        <p>Aprendí a presentar información técnica visualmente, mejorar el trabajo colaborativo y usar herramientas web.</p>
+        <p>Evaluación: <b>Alta</b>. Aporté ideas, ejecuté tareas técnicas y estuve comprometido en todo momento.</p>
+        <p>Podríamos mejorar la coordinación en reuniones virtuales y definir mejor los roles desde el inicio.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('components/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>
