@@ -2,20 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/load_screen.css">
-  <title>Bienvenida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  <link rel="stylesheet" href="assets/css/load_screen.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <title>Grupo 1 - Probabilidad y Estadística</title>
 </head>
 <body>
+  <div id="particles-js"></div>
+  
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="team-avatar">
+        <img src="https://i.ibb.co/238NDHwv/uner.png" alt="Avatar del equipo" class="logo">
+        <div class="team-motto">"Somos un equipo de estudiantes que usa la estadística para entender mejor el mundo. Nos apoyamos en visualizaciones claras y datos reales."</div>
+      </div>
+      
+      <h1>Portafolios del <span class="group-name">Grupo 1</span></h1>
+      <div class="subject-info">
+        <h2>Probabilidad y Estadística</h2>
+        <h3>Comisión A - Profesora: Lorena Gugliemone</h3>
+      </div>
 
-  <div class="container">
-    <a href="https://es.wikipedia.org/wiki/Hydrochoerus_hydrochaeris" target="_blank"><img src="https://i.ibb.co/238NDHwv/uner.png" alt="Grupo" class="logo"></a>
-    <h1>Grupo 1 de Estadística</h1>
-    <h3>Integrantes</h3>
-    <p>Aquino Benjamin, Bravo Agustin, Coppes Matias, Delfin Valentin</p>
-    <p>Mansilla Martin, Martin Gregorio, Pérez, Luciano</p>
+      <div class="team-members">
+        <h3>Nuestro grupo:</h3>
+        <div class="members-grid">
+          <div class="member-card">Aquino Benjamin</div>
+          <div class="member-card">Bravo Agustin</div>
+          <div class="member-card">Coppes Matias</div>
+          <div class="member-card">Delfin Valentin</div>
+          <div class="member-card">Mansilla Martin</div>
+          <div class="member-card">Martin Gregorio</div>
+          <div class="member-card">Pérez Luciano</div>
+        </div>
+      </div>
 
-    <button class="btn" onclick="entrar()">Entrar al portafolios</button>
+      <button class="btn" onclick="entrar()">
+        <span>Explorar portafolios</span>
+        <svg viewBox="0 0 13 10" height="10px" width="15px">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+    </div>
   </div>
 
   <script>
@@ -23,6 +51,6 @@
       window.location.href = "pages/home.html";
     }
   </script>
-
+  <script src="assets/scripts/particles-js.js" type="text/javascript"></script>
 </body>
 </html>
