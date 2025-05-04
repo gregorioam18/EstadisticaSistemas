@@ -165,6 +165,13 @@ iframe:hover {
   transform: scale(1.05);
 }
 
+.titulo {
+  color: #444; /* Gris oscuro, más suave que el negro */
+  border-bottom: 2px solid #ccc; /* Línea inferior gris clara */
+  padding-bottom: 5px; /* Espacio entre texto y línea */
+  margin-bottom: 15px; /* Espacio con lo que sigue */
+  font-weight: 600; /* Un poco más gruesa */
+}
 
 /* Responsive */
 @media (max-width: 600px) {
