@@ -7,9 +7,12 @@
 ## 👥 Integrantes
 | Nombre y Apellido   |
 |---------------------|
-| Aquino Benjamin     || Bravo Agustin       |
-| Coppes Matias       || Delfin Valentin     |
-| Mansilla Martin     || Martin Gregorio     |
+| Aquino Benjamin     |
+| Bravo Agustin       |
+| Coppes Matias       |
+| Delfin Valentin     |
+| Mansilla Martin     |
+| Martin Gregorio     |
 | Pérez Luciano       |
 
 ## 🌐 Acceso en línea
