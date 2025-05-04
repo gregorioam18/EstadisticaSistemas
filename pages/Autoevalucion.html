@@ -38,14 +38,17 @@
 
     <!-- AUTOEVALUACIONES -->
 
+<!-- TARJETAS DE INTEGRANTES -->
     <!-- Luciano Pérez -->
     <div class="event">
       <div class="time">🧑‍💻 Pérez, Luciano Agustín</div>
       <div class="content">
-        <p>Redacté las actas de varias reuniones (13/04 y 28/04), participé en la revisión teórica y consolidé la versión final del acta el 03/05, subiéndola al portfolio.</p>
-        <p>Aprendí sobre cómo organizar el trabajo grupal y redactar de forma clara y precisa, prestando atención a los detalles discutidos.</p>
-        <p>Evaluación: <b>Media/Alta</b>. Estuve presente en todas las reuniones y cumplí con las tareas asignadas con compromiso.</p>
-        <p>Mejoraría la organización en reuniones por Discord, ya que hablar en subgrupos dentro del mismo canal dificultaba la comunicación.</p>
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-medium-high">Participación: Media/Alta</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="luciano-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
       </div>
     </div>
 
@@ -53,10 +56,12 @@
     <div class="event">
       <div class="time">🧑‍💻 Aquino, Benjamín</div>
       <div class="content">
-        <p>Aporté materiales complementarios, corregí errores, mejoré redacciones y verifiqué el cumplimiento de las consignas.</p>
-        <p>Aprendí a hacer revisiones críticas y a evaluar el trabajo en equipo desde una perspectiva objetiva y teórica.</p>
-        <p>Evaluación: <b>Media</b>. A pesar de mi compromiso, no pude involucrarme tanto en tareas técnicas.</p>
-        <p>Podríamos mejorar la asignación inicial de roles para tener una organización más clara desde el principio.</p>
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-medium-high">Participación: Media</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="benjamin-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
       </div>
     </div>
 
@@ -64,21 +69,64 @@
     <div class="event">
       <div class="time">🧑‍💻 Mansilla, Martín</div>
       <div class="content">
-        <p>Tomé notas, asigné tareas, participé en las actividades prácticas y contribuí a la redacción del acta.</p>
-        <p>Aprendí sobre análisis de datos, detección de sesgos estadísticos y trabajo grupal.</p>
-        <p>Evaluación: <b>Media/Alta</b>. Participé en todas las reuniones y cumplí con las tareas asignadas.</p>
-        <p>Sugiero roles rotativos y reuniones más cortas, además de implementar un checklist para el seguimiento.</p>
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-medium-high">Participación: Media/Alta</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="martin-m-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
       </div>
     </div>
 
     <!-- Martín Gregorio -->
     <div class="event">
-      <div class="time">🧑‍💻 Gregorio, Martín</div>
+      <div class="time">🧑‍💻 Martín, Gregorio</div>
       <div class="content">
-        <p>Tomé notas, revisé redacciones, propuse y comencé el portfolio en GitHub Pages, integrando Trinket, y diseñé esquemas gráficos.</p>
-        <p>Aprendí a presentar información técnica visualmente, mejorar el trabajo colaborativo y usar herramientas web.</p>
-        <p>Evaluación: <b>Alta</b>. Aporté ideas, ejecuté tareas técnicas y estuve comprometido en todo momento.</p>
-        <p>Podríamos mejorar la coordinación en reuniones virtuales y definir mejor los roles desde el inicio.</p>
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-high">Participación: Alta</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="martin-g-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
+      </div>
+    </div>
+
+    <!-- Agustin Bravo -->
+    <div class="event">
+      <div class="time">🧑‍💻 Bravo, Agustín</div>
+      <div class="content">
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-medium-high">Participación: Media/Alta</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="agustin-b-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
+      </div>
+    </div>
+
+    <!-- Valentin Delfin -->
+    <div class="event">
+      <div class="time">🧑‍💻 Delfín, Valentín</div>
+      <div class="content">
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-high">Participación: ??</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="valen-d-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
+      </div>
+    </div>
+
+    <!-- Matias Coppes -->
+    <div class="event">
+      <div class="time">🧑‍💻 Coppes, Matías</div>
+      <div class="content">
+        <div class="member-evaluation">
+          <span class="evaluation-tag evaluation-high">Participación: ??</span>
+        </div>
+        <button class="view-evaluation-btn" data-modal="matias-c-modal">
+          <i class="fas fa-search"></i> Ver Autoevaluación Completa
+        </button>
       </div>
     </div>
 
@@ -87,12 +135,76 @@
   <!-- Footer -->
   <div id="footer-placeholder"></div>
 
+  <!-- Modales (se cargarán dinámicamente desde modales.html) -->
+  <div id="modals-container"></div>
+
+
   <script>
     fetch('components/footer.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('footer-placeholder').innerHTML = html;
       });
+
+ // Cargar modales
+ fetch('components/modales.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('modals-container').innerHTML = html;
+        setupModals();
+      });
+
+    function setupModals() {
+      // Efecto ripple para los botones
+      document.querySelectorAll('.view-evaluation-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          // Crear efecto ripple
+          const ripple = document.createElement('span');
+          ripple.classList.add('ripple');
+          this.appendChild(ripple);
+          
+          // Posicionar ripple
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          ripple.style.width = ripple.style.height = `${size}px`;
+          ripple.style.left = `${e.clientX - rect.left - size/2}px`;
+          ripple.style.top = `${e.clientY - rect.top - size/2}px`;
+          
+          // Eliminar ripple después de la animación
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+          
+          // Abrir modal
+          const modalId = this.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      // Cerrar modal
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this || e.target.classList.contains('close-modal')) {
+            // Animación de salida
+            const modalContent = this.querySelector('.modal-content');
+            modalContent.style.animation = 'slideIn 0.3s ease reverse';
+            
+            setTimeout(() => {
+              this.classList.remove('active');
+              document.body.style.overflow = 'auto';
+              modalContent.style.animation = ''; // Resetear animación
+            }, 250);
+          }
+        });
+      });
+    }
   </script>
 
 </body>
