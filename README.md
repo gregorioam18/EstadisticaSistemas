@@ -13,7 +13,7 @@
 | Pérez Luciano       |
 
 ## 🌐 Acceso en línea
-Se puede ingresar al portafolios haciendo [https://tu-usuario.github.io/probabilidad-estadistica-grupo1](Click_Aqui) :)
+Se puede ingresar al portafolios haciendo [Click aqui](https://gregorioam18.github.io/EstadisticaSistemas/) :)
 
 📘 **Comisión A**  
 © Hecho con ❤️ por **Grupo 1 de Estadística**
