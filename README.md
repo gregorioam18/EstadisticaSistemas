@@ -7,13 +7,13 @@
 ## 👥 Integrantes
 | Nombre y Apellido   |
 |---------------------|
-| Aquino Benjamin     |
-| Bravo Agustin       |
-| Coppes Matias       |
-| Delfin Valentin     |
-| Mansilla Martin     |
-| Martin Gregorio     |
-| Pérez Luciano       |
+| Benjamín Aquino     |
+| Agustín Bravo       |
+| Matías Coppes       |
+| Valentín Delfín     |
+| Martín Mansilla     |
+| Gregorio Martin     |
+| Luciano Pérez       |
 
 ## 🌐 Acceso en línea
 Se puede ingresar al portafolios haciendo [Click aqui](https://gregorioam18.github.io/EstadisticaSistemas/) :)
