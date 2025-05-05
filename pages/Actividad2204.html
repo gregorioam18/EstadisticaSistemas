@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../assets/css/Actividades.css">
   <link rel="stylesheet" href="../assets/css/footer.css" />
   <link rel="stylesheet" href="../assets/css/top-btn.css" />
+  <link rel="stylesheet" href="../assets/css/actividad_elegida.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -54,23 +55,237 @@
     </li>
     <li>
       <strong>Interpretación de las medidas:</strong>
-      <p>Observen los valores obtenidos y escriban una breve interpretación para cada uno (excepto <code>std</code>, que se trabajará más adelante).</p>
-      <ul>
-        <li><strong>count:</strong> Es la cantidad de datos que se toman en cuenta.</li>
-        <li><strong>mean:</strong> Es la media que indica que en promedio hay una concentración de 21.40 µg/m³ de NO₂.</li>
-        <li><strong>min:</strong> Es un mínimo establecido pero no el mínimo detectado.</li>
-        <li><strong>25%:</strong> Este cuartil indica que el 25% de las concentraciones medidas fueron iguales o menores a 8 µg/m³.</li>
-        <li><strong>50% (mediana):</strong> Indica que el 50% de las muestras dieron igual o menor que 16 µg/m³.</li>
-        <li><strong>75%:</strong> Señala que el 75% de las muestras dieron igual o menor que 29 µg/m³.</li>
-      </ul>
+      <p>Analizamos cada una de las estadísticas descriptivas obtenidas:</p>
+      
+      <div class="cards-container">
+        <!-- Tarjeta para count -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>count</h3>
+            <span class="stat-value">X</span>
+          </div>
+          <div class="stat-description">
+            <p>Representa el número total de observaciones o muestras recolectadas de concentración de NO₂ en el estudio.</p>
+            <p class="stat-importance">Importancia: Nos indica el tamaño de la muestra y la confiabilidad de los resultados.</p>
+          </div>
+        </div>
+    
+        <!-- Tarjeta para mean -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>mean</h3>
+            <span class="stat-value">21.40 µg/m³</span>
+          </div>
+          <div class="stat-description">
+            <p>Es el promedio de todas las concentraciones medidas de NO₂.</p>
+            <p class="stat-importance">Importancia: Indica que en promedio hay una concentración de 21.40 µg/m³, por debajo del límite preocupante (40 µg/m³).</p>
+          </div>
+        </div>
+    
+        <!-- Tarjeta para std -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>std</h3>
+            <span class="stat-value">19.10 µg/m³</span>
+          </div>
+          <div class="stat-description">
+            <p>Desviación estándar: medida de dispersión que indica cuánto varían los datos respecto a la media.</p>
+            <p class="stat-importance">Importancia: Un valor alto (ej. >10) sugeriría mucha variabilidad en las concentraciones, mientras que un valor bajo indicaría mediciones más consistentes.</p>
+            <p>En este caso, al comparar con la media (21.40), podemos evaluar si la dispersión es significativa.</p>
+          </div>
+        </div>
+    
+        <!-- Tarjeta para min -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>min</h3>
+            <span class="stat-value">0 µg/m³</span>
+          </div>
+          <div class="stat-description">
+            <p>Valor mínimo registrado de concentración de NO₂.</p>
+            <p class="stat-importance">Importancia: Nos muestra el límite inferior de las mediciones y ayuda a identificar el rango completo de datos.</p>
+          </div>
+        </div>
+    
+        <!-- Tarjeta para percentiles -->
+        <div class="stat-card-group">
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>25%</h3>
+              <span class="stat-value">8 µg/m³</span>
+            </div>
+            <div class="stat-description">
+              <p>Primer cuartil: 25% de las mediciones fueron iguales o menores a este valor.</p>
+              <p class="stat-importance">Indica que un cuarto de las muestras tienen concentraciones muy bajas.</p>
+            </div>
+          </div>
+    
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>50%</h3>
+              <span class="stat-value">16 µg/m³</span>
+            </div>
+            <div class="stat-description">
+              <p>Mediana: valor que divide la muestra en dos partes iguales.</p>
+              <p class="stat-importance">Importante porque no se ve afectada por valores extremos. La mitad de las muestras están por debajo de 16 µg/m³.</p>
+            </div>
+          </div>
+    
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>75%</h3>
+              <span class="stat-value">29 µg/m³</span>
+            </div>
+            <div class="stat-description">
+              <p>Tercer cuartil: 75% de las mediciones fueron iguales o menores a este valor.</p>
+              <p class="stat-importance">Solo el 25% de las muestras superan este valor, acercándose al límite de 40 µg/m³.</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Tarjeta para max -->
+        <div class="stat-card">
+          <div class="stat-header">
+            <h3>max</h3>
+            <span class="stat-value">249 µg/m³</span>
+          </div>
+          <div class="stat-description">
+            <p>Valor máximo registrado de concentración de NO₂.</p>
+            <p class="stat-importance">Importancia: Nos alerta sobre los picos máximos de contaminación que podrían ser preocupantes.</p>
+          </div>
+        </div>
+      </div>
     </li>
     <li>
       <strong>Reflexión grupal:</strong>
-      <ul>
-        <li><strong>a)</strong> Las medidas de dispersión nos permiten observar que la mayoría de las concentraciones de NO₂ se encuentran dentro del rango tolerable establecido por la Unión Europea (menos de 40 µg/m³), concentrándose principalmente en los primeros tres cuartiles. Esto indica una baja dispersión entre los valores más frecuentes.<br>Sin embargo, en el cuarto cuartil se observa una mayor dispersión, especialmente por la gran diferencia entre el percentil 75 y el valor máximo, lo que evidencia la presencia de valores atípicos. Estos valores extremos aumentan la dispersión general y deben ser considerados al interpretar la variabilidad de los datos.</li>
-        <li><strong>b)</strong> El nivel máximo tolerable es de aproximadamente 40 µg/m³. Al menos hasta el 75-80% de las concentraciones se encuentran por debajo de este límite, lo que sugiere que, en general, no se presentan niveles preocupantes para la salud o el ambiente.</li>
-        <li><strong>c)</strong> Sí, las medidas confirman lo que mostraban los gráficos. Las medidas, como se mencionó anteriormente, reflejan una gran acumulación de valores por debajo del límite tolerable (40 µg/m³), lo cual coincide con los gráficos que muestran esa concentración. Además, el hecho de que la media sea mayor que la mediana indica una asimetría positiva, lo que se interpreta en este contexto como una tendencia hacia la disminución de las concentraciones de NO₂.</li>
-      </ul>
+      
+      <div class="reflection-container">
+        <!-- Pregunta 1 -->
+        <div class="reflection-question">
+          <div class="question-header">
+            <i class="fas fa-chart-bar"></i>
+            <h3>1. ¿Qué información aportan estas medidas sobre la distribución de NO₂?</h3>
+          </div>
+          <div class="question-answer">
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-icon">📊</span>
+                <h4>Distribución asimétrica</h4>
+              </div>
+              <p>La <strong>media (21.41) > mediana (16)</strong> indica una <strong>asimetría positiva</strong>, con una cola larga hacia valores altos. Esto significa que:</p>
+              <ul>
+                <li>Hay más concentraciones bajas que altas</li>
+                <li>Existen valores atípicos elevados que "arrastran" la media hacia arriba</li>
+                <li>El 75% de los datos están por debajo de 29 µg/m³</li>
+              </ul>
+            </div>
+            
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-icon">📈</span>
+                <h4>Variabilidad significativa</h4>
+              </div>
+              <p>Con una <strong>desviación estándar de 19.11</strong> (89% de la media), encontramos:</p>
+              <ul>
+                <li>Grandes fluctuaciones en las concentraciones</li>
+                <li>Diferentes patrones según ubicación/horario</li>
+                <li>Rango extremo desde 0 hasta 249 µg/m³</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pregunta 2 -->
+        <div class="reflection-question">
+          <div class="question-header">
+            <i class="fas fa-heartbeat"></i>
+            <h3>2. ¿Los valores indican niveles que podrían ser preocupantes para la salud o el ambiente?</h3>
+          </div>
+          <div class="question-answer">
+            <div class="comparison-table">
+              <table>
+                <tr>
+                  <th>Rango (µg/m³)</th>
+                  <th>% de muestras</th>
+                  <th>Impacto potencial</th>
+                  <th>Clasificación</th>
+                </tr>
+                <tr>
+                  <td>0-40 (OMS)</td>
+                  <td>92.7%</td>
+                  <td>Bajo riesgo</td>
+                  <td class="safe">Aceptable</td>
+                </tr>
+                <tr>
+                  <td>40-100</td>
+                  <td>6.2%</td>
+                  <td>Riesgo moderado</td>
+                  <td class="warning">Precaución</td>
+                </tr>
+                <tr>
+                  <td>>100</td>
+                  <td>1.1%</td>
+                  <td>Alto riesgo</td>
+                  <td class="danger">Peligroso</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="health-impact">
+              <h4>Conclusiones sobre salud:</h4>
+              <div class="impact-point positive">
+                <i class="fas fa-check-circle"></i>
+                <p><strong>Positivo:</strong> El 92.7% de mediciones están dentro del límite seguro anual de la OMS (≤40 µg/m³)</p>
+              </div>
+              <div class="impact-point negative">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p><strong>Preocupante:</strong> 7.3% de muestras exceden el límite, con 1.1% en niveles peligrosos (>100 µg/m³)</p>
+              </div>
+              <div class="impact-point recommendation">
+                <i class="fas fa-lightbulb"></i>
+                <p><strong>Recomendación:</strong> Investigar las ubicaciones y horarios de las mediciones >100 µg/m³ para implementar medidas correctivas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Pregunta 3 -->
+        <div class="reflection-question">
+          <div class="question-header">
+            <i class="fas fa-check-double"></i>
+            <h3>3. ¿Las medidas confirman lo que mostraban los gráficos? Justifiquen.</h3>
+          </div>
+          <div class="question-answer">
+            <div class="graph-confirmation">
+              <div class="confirmation-card">
+                <h4>Consistencia con histogramas:</h4>
+                <p>Los gráficos previos mostraban:</p>
+                <ul>
+                  <li>Mayor concentración de datos en valores bajos (0-30 µg/m³)</li>
+                  <li>Cola larga hacia la derecha (valores altos menos frecuentes)</li>
+                  <li>Algunos picos aislados en valores extremos</li>
+                </ul>
+                <p class="match">✓ Confirmado por: Media > Mediana, y percentiles (Q3=29)</p>
+              </div>
+              
+              <div class="confirmation-card">
+                <h4>Consistencia con gráficos de línea:</h4>
+                <p>Los gráficos temporales mostraban:</p>
+                <ul>
+                  <li>Fluctuaciones importantes a lo largo del tiempo</li>
+                  <li>Picos ocasionales muy pronunciados</li>
+                  <li>Valores base generalmente bajos</li>
+                </ul>
+                <p class="match">✓ Confirmado por: Alta desviación estándar (19.11) y max=249</p>
+              </div>
+            </div>
+            
+            <div class="conclusion-box">
+              <p><strong>Conclusión final:</strong> Las medidas estadísticas <strong>validan completamente</strong> los patrones observados en los gráficos, proporcionando <strong>precisión numérica</strong> a las observaciones visuales. La combinación de ambas aproximaciones fortalece nuestros hallazgos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
   </ol>
 </section>

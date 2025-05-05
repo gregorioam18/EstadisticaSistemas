@@ -56,7 +56,7 @@ header p {
 
 /* Contenido principal */
 main.contenido {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
   background: white;
@@ -101,20 +101,9 @@ iframe {
   box-shadow: 0 0 12px rgba(0, 51, 102, 0.12);
   width: 100%;
   height: 400px;
-  transition: transform 0.3s ease;
-}
-
-iframe:hover {
-  transform: scale(1.01);
-}
-
-/* Wrapper del iframe */
-.iframe-wrapper {
-  background: #ffffff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-  margin: 2rem 0;
 }
 
 /* Navbar elegante */
