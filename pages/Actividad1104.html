@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="../assets/css/footer.css" />
   <link rel="stylesheet" href="../assets/css/top-btn.css" />
   <link rel="stylesheet" href="../assets/css/actividad_obligatoria.css" />
+  <link rel="stylesheet" href="../assets/css/bibliography.css" />
+
 </head>
 
 <body>
@@ -29,65 +31,11 @@
 
   <main class="contenido">
     <section class="consigna">
-      <h2>Consigna</h2>
-      <p><strong>🎯Objetivo:</strong> Explorar relaciones entre variables mediante un análisis multivariado, utilizando
-        la plataforma Gapminder y sus gráficos de burbujas dinámicos, que permiten visualizar datos en diferentes
-        dimensiones a lo largo del tiempo.</p>
-
-      <ol>
-        <li>
-          <strong>Selección de variables</strong>
-          <ul>
-            <li><strong>1.1</strong>Seleccionen cuatro variables que consideren relevantes y potencialmente relacionadas
-              (por ejemplo: ingreso per cápita, esperanza de vida, tasa de fertilidad, emisiones de CO₂, nivel
-              educativo, población, etc.).</li>
-            <li><strong>1.2</strong>Indiquen de manera clara y precisa qué representa cada variable.</li>
-            <li><strong>1.3</strong>Expliquen por qué creen que pueden estar relacionadas.</li>
-            <li><strong>1.4</strong>Anticipen qué tipo de relación esperan encontrar entre ellas (directa, inversa,
-              nula).</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Análisis con Gapminder</strong>
-          <p>Usen el gráfico de burbujas de Gapminder para observar cómo evolucionan las variables seleccionadas a lo
-            largo del tiempo. Recuerden que pueden ubicar: una variable en el eje X, otra en el eje Y, una tercera en el
-            tamaño de las burbujas, una cuarta en el color de las burbujas.</p>
-          <p><strong>📌Importante:</strong> aunque el tiempo no se grafica como una variable, cumple un rol central al
-            permitir observar la evolución dinámica de los datos. Por eso también debe ser tenido en cuenta en el
-            análisis.</p>
-          <ul>
-            <li><strong>1.1</strong>¿Se evidencian relaciones entre las variables?</li>
-            <li><strong>1.2</strong>¿Se ajustan los datos a las relaciones esperadas?</li>
-            <li><strong>1.3</strong>¿Se detectan valores atípicos (outliers)? ¿Qué países se alejan del comportamiento
-              general?</li>
-            <li><strong>1.4</strong>¿Qué patrones, tendencias o rupturas temporales llaman la atención?</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>Interpretación y reflexión</strong>
-          <ul>
-            <li><strong>1.1</strong>Expliquen qué relaciones encontraron (o no) entre las variables.</li>
-            <li><strong>1.2</strong>Propongan posibles explicaciones para los comportamientos observados.</li>
-            <li><strong>1.3</strong>Reflexionen sobre los valores atípicos: ¿qué factores podrían justificar que ciertos
-              países se comporten de forma tan distinta?</li>
-          </ul>
-        </li>
-      </ol>
-
-      <p><strong>🧠Ideas clave para tener en cuenta:</strong></p>
-      <ul>
-        <li>La animación temporal permite enriquecer el análisis observando cambios a lo largo de los años.</li>
-        <li>Las burbujas representan países. Es posible comparar, filtrar y seleccionar países específicos para analizar
-          con más detalle.</li>
-      </ul>
-    </section>
+      <h2>Explorando el Mundo en Burbujas</h2>
 
     <section class="resolucion">
-      <h2>Resolución</h2>
 
-      <h3 class="variables-title">Variables Seleccionadas</h3>
+    <h3 class="section-title">1.1 y 1.2 Selección de Variables y Definición</h3>
   <!-- Tarjetas para las variables -->
   <div class="variables-cards">
     <!-- Tarjeta 1: Bebés por mujer -->
@@ -97,7 +45,6 @@
         <h3>Bebés por mujer (Fertilidad total)</h3>
       </div>
       <div class="card-body">
-        <p><strong>Eje:</strong> Y</p>
         <p><strong>Definición:</strong> Número de hijos que nacerían de una mujer si viviera hasta el final de sus años fértiles y tuviera hijos de acuerdo con las tasas de fertilidad específicas por edad del año especificado.</p>
       </div>
     </div>
@@ -109,7 +56,6 @@
         <h3>Mortalidad infantil (0-5 años)</h3>
       </div>
       <div class="card-body">
-        <p><strong>Eje:</strong> X</p>
         <p><strong>Definición:</strong> Muertes de niños menores de cinco años por cada 1.000 nacidos vivos.</p>
       </div>
     </div>
@@ -121,7 +67,6 @@
         <h3>Vacunación infantil</h3>
       </div>
       <div class="card-body">
-        <p><strong>Representación:</strong> Color de burbujas</p>
         <p><strong>Definición:</strong> Porcentaje de niños de un año que han recibido al menos una de las vacunas principales (BCG, DTP3, HepB3, etc.).</p>
       </div>
     </div>
@@ -133,13 +78,12 @@
         <h3>Población total</h3>
       </div>
       <div class="card-body">
-        <p><strong>Representación:</strong> Tamaño de burbujas</p>
         <p><strong>Definición:</strong> Número total de habitantes en el territorio.</p>
       </div>
     </div>
   </div>
-  <div class="expected-relationships">
-    <h3 class="section-title">1.3 - 1.4 Relación entre las variables + tipo de relación esperada</h3>
+  <div class="expected-relationships" id="relacion_esperada">
+    <h3 class="section-title">1.3 y 1.4 Expliquen por qué creen que pueden estar relacionadas y anticipen qué tipo de relación esperan encontrar.</h3>
     
     <div class="relationship-container">
       <!-- Relación 1 -->
@@ -150,7 +94,7 @@
         </div>
         <div class="rel-body">
           <p class="rel-type"><strong>Relación esperada:</strong> Directa</p>
-          <p class="rel-explanation">En países donde la mortalidad infantil es alta, es común que las familias tengan más hijos como una estrategia para compensar posibles pérdidas. Además, estos contextos suelen estar asociados con menor acceso a servicios de salud y educación, lo cual también se vincula con tasas de fertilidad más elevadas.</p>
+          <p class="rel-explanation">En contextos con alta mortalidad infantil y menor acceso a salud y educación, las familias suelen tener más hijos para compensar posibles pérdidas.</p>
         </div>
       </div>
       
@@ -162,7 +106,7 @@
         </div>
         <div class="rel-body">
           <p class="rel-type"><strong>Relación esperada:</strong> Inversa</p>
-          <p class="rel-explanation">La vacunación reduce significativamente el riesgo de enfermedades prevenibles en la infancia. Por eso, a mayor cobertura de vacunación, menor suele ser la mortalidad infantil. Este indicador refleja el acceso y la calidad del sistema de salud.</p>
+          <p class="rel-explanation">Mayor vacunación reduce la mortalidad infantil, reflejando mejor acceso y calidad en salud.</p>
         </div>
       </div>
       
@@ -174,7 +118,7 @@
         </div>
         <div class="rel-body">
           <p class="rel-type"><strong>Relación esperada:</strong> Inversa</p>
-          <p class="rel-explanation">En países con alta cobertura de vacunación y mejor atención médica en general, las familias confían más en que sus hijos sobrevivirán. Esto se traduce en una menor necesidad de tener muchos hijos, lo que contribuye a una baja en la tasa de fertilidad.</p>
+          <p class="rel-explanation">Con buena atención médica y alta vacunación, las familias confían en la supervivencia infantil y tienen menos hijos.</p>
         </div>
       </div>
       
@@ -186,14 +130,14 @@
         </div>
         <div class="rel-body">
           <p class="rel-type"><strong>Rol:</strong> Contextualizador</p>
-          <p class="rel-explanation">El tamaño de la población ayuda a poner en perspectiva la magnitud del fenómeno en cada país. Aunque las comparaciones se hacen en base a tasas o porcentajes (para que sean proporcionales), el tamaño poblacional sigue siendo clave para entender el peso de cada país en el contexto global.</p>
+          <p class="rel-explanation">El tamaño poblacional contextualiza la magnitud del fenómeno, siendo clave para interpretar los datos globales, incluso al usar tasas o porcentajes.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <h3 class="variables-title">Gráfico Gapminder</h3>
-  <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:172;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
+<!-- <h3 class="variables-title">Gráfico Gapminder</h3>
+  <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:172;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe> --> 
 
 
   <div class="analysis-container">
@@ -205,12 +149,8 @@
       </div>
       <div class="question-answer">
         <p>Sí, pudimos encontrar las relaciones entre las variables que planteamos. Por ejemplo, los países con alta mortalidad infantil suelen mostrar mayores tasas de fertilidad, y aquellos con alta cobertura de vacunación presentan menor mortalidad infantil.</p>
-        <ul>
-          <li>Sí, en general se observan patrones que coinciden con las relaciones esperadas. Por ejemplo, los países con alta mortalidad infantil suelen mostrar mayores tasas de fertilidad, y aquellos con alta cobertura de vacunación presentan menor mortalidad infantil. Las agrupaciones regionales o de ingreso pueden ayudar a reforzar esta observación (por ejemplo, África subsahariana vs. Europa)</li>
-        </ul>
       </div>
     </div>
-
     <!-- Pregunta 2.2 -->
     <div class="analysis-card">
       <div class="question-header">
@@ -218,67 +158,36 @@
         <h3>2.2 ¿Se ajustan los datos a las relaciones esperadas?</h3>
       </div>
       <div class="question-answer">
-        <p><em>Con ayuda del gráfico de Gapminder pudimos observar que los datos que elegimos están relacionadas de la manera que esperábamos</em></p>
+        <p><em>Con ayuda del gráfico de Gapminder pudimos observar que los datos que elegimos están relacionados de la manera que esperábamos.</em></p>
         <ul>
           <li>
-            <strong>1. Mortalidad infantil y tasa de fertilidad – Relación directa</strong>
-            <p>Coincide con lo esperado: los países con mayor mortalidad infantil tienden a tener más hijos por mujer.</p>
-            <p>Esto se ve claramente en regiones como África Subsahariana, donde la mortalidad infantil es alta y la fertilidad también.</p>
+            <strong>Mortalidad infantil y tasa de fertilidad: </strong>Relación directa, los países con mayor mortalidad infantil tienden a tener más hijos por mujer.
           </li>
           <li>
-            <strong>2. Mortalidad infantil y vacunación – Relación inversa</strong>
-            <p>Relación visible: a mayor cobertura de vacunación, la mortalidad infantil suele ser menor.</p>
-            <p>Los países con buenos sistemas de salud (por ejemplo, europeos o latinoamericanos) muestran bajas tasas de mortalidad infantil y altos niveles de vacunación.</p>
+            <strong>Mortalidad infantil y vacunación: </strong> Relación inversa, a mayor cobertura de vacunación, la mortalidad infantil suele ser menor, clara en países con buenos sistemas de salud.
           </li>
           <li>
-            <strong>3. Tasa de fertilidad y vacunación – Relación inversa</strong>
-            <p>Confirmada: países con más vacunación suelen tener menos hijos por mujer.</p>
-            <p>Esto refleja mayor confianza en la supervivencia infantil, lo que reduce la necesidad de tener muchos hijos.</p>
+            <strong>Tasa de fertilidad y vacunación: </strong> Relación inversa, en países con mayor vacunación se asocia a menos hijos por mujer.
           </li>
         </ul>
-        
-        <p><em><strong>¿Se ajustan los datos a lo que esperábamos?</strong></em></p>
-        <p><em>Sí, usando el gráfico de Gapminder pudimos ver que los datos que elegimos se relacionan como pensábamos y algunas que podemos destacar son:</em></p>
-        
-        <div class="highlight-points">
-          <div class="highlight-card">
-            <h4>Mortalidad infantil y tasa de fertilidad – Relación directa</h4>
-            <p>Vimos que en los países donde mueren más bebés, las mujeres suelen tener más hijos. Esto tiene sentido: si hay más riesgo de que un hijo no sobreviva, las familias tienden a tener más. Un buen ejemplo es África Subsahariana, donde tanto la mortalidad infantil como la fertilidad son altas.</p>
-          </div>
-          
-          <div class="highlight-card">
-            <h4>Mortalidad infantil y vacunación – Relación inversa</h4>
-            <p>Acá se nota que cuando hay más vacunación, la mortalidad infantil baja. En países con buenos sistemas de salud, como muchos en Europa o América Latina, hay pocos casos de mortalidad infantil y al mismo tiempo niveles altos de vacunación. Es una relación bastante lógica.</p>
-          </div>
-          
-          <div class="highlight-card">
-            <h4>Tasa de fertilidad y vacunación – Relación inversa</h4>
-            <p>También vimos que en los países donde hay más vacunación, la gente tiende a tener menos hijos. Esto puede estar relacionado con que las familias confían más en que sus hijos van a sobrevivir, entonces no sienten la necesidad de tener tantos.</p>
-          </div>
-        </div>
+        <p><em><center><strong>Los datos se ajustan a lo esperado y reflejan patrones coherentes con nuestras hipótesis iniciales.</strong></center></em></p>
       </div>
     </div>
 
     <!-- Pregunta 2.3 -->
-    <div class="analysis-card">
+    <div class="analysis-card" id="valores_atipicos">
       <div class="question-header">
         <i class="fas fa-exclamation-triangle"></i>
         <h3>2.3 Valores atípicos</h3>
       </div>
       <div class="question-answer">
-        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$ner=1800;;;;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
-        <p><strong>Níger:</strong></p>
-        <ul>
-          <li>Tasa de fertilidad (bebés por mujer): 6.8 (muy alta)</li>
-          <li>Mortalidad infantil (por cada 1000 nacidos vivos): 81 (muy alta)</li>
-          <li>Vacunación infantil (al menos una vacuna): ≈ 50–60% (baja comparada con el promedio mundial)</li>
-          <li>Población: ≈ 27 millones (mediana, pero no explica por sí sola los valores extremos anteriores)</li>
-          <li>Tasa de fertilidad y mortalidad infantil son mucho mayores que el promedio mundial.</li>
-        </ul>
-        <p>Vacunación infantil es bastante baja, lo que refuerza los niveles altos de mortalidad infantil.</p>
-        <p>Mientras muchos países bajaron su fertilidad a < 3 hijos por mujer, Níger sigue por encima de 6.</p>
-        <p><strong>Finlandia:</strong> Mostraba inicialmente una tasa de mortalidad infantil alta, pero ha disminuido de forma sostenida a lo largo del tiempo hasta alcanzar una de las más bajas actualmente.</p>
-        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$fin=1812;;;;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
+      <!--<iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$ner=1800;;;;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe> -->
+        <p>Algunos países se desvían del patrón general. Níger y Finlandia son ejemplos clave para analizar estas diferencias.</p>
+        <p><strong>Níger</strong> en 1997 presenta una alta tasa de fertilidad (7.8 hijos por mujer) y mortalidad infantil (255 por cada 1000 nacidos vivos), junto con una baja cobertura de vacunación (50–60%). Aunque su población (~27 millones) es mediana, no explica por sí sola estos valores extremos. Mientras muchos países han reducido la fertilidad a menos de 3 hijos, Níger sigue con niveles muy elevados.
+           <br><strong>Finlandia</strong>, en cambio, comenzó con una mortalidad infantil alta, pero logró reducirla de forma sostenida, alcanzando hoy una de las tasas más bajas del mundo
+        </p>
+        <!-- <p><strong>Finlandia:</strong> Mostraba inicialmente una tasa de mortalidad infantil alta, pero ha disminuido de forma sostenida a lo largo del tiempo hasta alcanzar una de las más bajas actualmente.</p>
+        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$fin=1812;;;;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe> -->
       </div>
     </div>
 
@@ -293,6 +202,7 @@
       </div>
     </div>
   </div>
+
 <!-- Interpretación final - Punto 3 -->
 <div class="analysis-container">
   <!-- Pregunta 3.1 -->
@@ -302,92 +212,161 @@
       <h3>3.1 Relaciones entre las variables</h3>
     </div>
     <div class="question-answer">
-      <p>Al analizar las variables mortalidad infantil, tasa de fertilidad, vacunación infantil y población, se observa que existen relaciones claras entre algunas de ellas:</p>
+      <p>El análisis muestra relaciones consistentes entre las variables:</p>
       
       <div class="relationship-cards">
         <div class="relationship-card direct">
           <div class="rel-icon">↗</div>
           <h4>Fertilidad vs Mortalidad infantil</h4>
-          <p>La tasa de fertilidad tiende a ser más alta en países con mayor mortalidad infantil, lo que sugiere que las familias tienen más hijos como forma de compensar posibles pérdidas.</p>
+          <p>Tienen una relación directa; en países con alta mortalidad, las familias suelen tener mas hijos como forma de compensación.</p>
         </div>
         
         <div class="relationship-card inverse">
           <div class="rel-icon">↘</div>
           <h4>Vacunación vs Mortalidad infantil</h4>
-          <p>La vacunación infantil muestra una relación inversa con la mortalidad infantil: a mayor cobertura de vacunación, menor es la cantidad de muertes infantiles.</p>
+          <p>Presentan una relación inversa; mayor cobertura reduce significativamente las muertes infantiles.</p>
         </div>
         
         <div class="relationship-card inverse">
           <div class="rel-icon">↘</div>
           <h4>Vacunación vs Fertilidad</h4>
-          <p>A medida que la vacunación aumenta, la tasa de fertilidad suele disminuir, lo que indica mayor confianza en la supervivencia de los hijos.</p>
+          <p>También se relacionan de forma inversa; con más vacunación, las familias confían en la supervivencia infantil y tienen menos hijos.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Pregunta 3.2 -->
-  <div class="analysis-card">
-    <div class="question-header">
-      <i class="fas fa-search"></i>
-      <h3>3.2 Explicaciones posibles</h3>
-    </div>
-    <div class="question-answer">
+<div class="analysis-card">
+  <div class="question-header">
+    <i class="fas fa-search"></i>
+    <h3>3.2 Explicaciones posibles</h3>
+  </div>
+  <div class="question-answer">
+    <p>Entre los factores explicativos se destacan:</p>
+    <div class="explanations-row">
       <div class="explanation-card">
         <i class="fas fa-hospital"></i>
-        <p><strong>Acceso a salud:</strong> Países con sistemas de salud sólidos tienen tasas de vacunación altas, lo que reduce la mortalidad infantil.</p>
+        <div>
+          <h4>Acceso a salud</h4>
+          <p>Mejores sistemas sanitarios elevan la vacunación y reducen la mortalidad infantil.</p>
+        </div>
       </div>
       
       <div class="explanation-card">
         <i class="fas fa-graduation-cap"></i>
-        <p><strong>Educación:</strong> La educación sexual y reproductiva, más presente en países desarrollados, influye en menores tasas de fertilidad.</p>
+        <div>
+          <h4>Educación</h4>
+          <p>Mayor educación sexual y reproductiva está asociada a menores tasas de fertilidad.</p>
+        </div>
       </div>
       
       <div class="explanation-card">
         <i class="fas fa-landmark"></i>
-        <p><strong>Políticas públicas:</strong> Inversión en programas de salud y educación contribuye a mejorar estos indicadores.</p>
+        <div>
+          <h4>Políticas públicas</h4>
+          <p>La inversión estatal en salud y educación mejora todos estos indicadores.</p>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Pregunta 3.3 -->
-  <div class="analysis-card">
-    <div class="question-header">
-      <i class="fas fa-exclamation-circle"></i>
-      <h3>3.3 Reflexión sobre valores atípicos</h3>
-    </div>
-    <div class="question-answer">
-      <div class="outlier-case">
-        <h4>Caso Níger:</h4>
-        <div class="outlier-stats">
-          <div class="stat-badge high">
-            <span>6.8</span>
-            <small>hijos/mujer</small>
+<div class="analysis-card" id="reflexion">
+  <div class="question-header">
+    <i class="fas fa-exclamation-circle"></i>
+    <h3>3.3 Reflexión sobre valores atípicos</h3>
+  </div>
+  <div class="question-answer">
+    <div class="outlier-analysis">
+      <div class="outlier-header">
+        <h4>Caso de Estudio: Níger</h4>
+        <div class="outlier-stats-grid">
+          <div class="outlier-stat">
+            <div class="stat-value high">7.8</div>
+            <div class="stat-label">Hijos por mujer</div>
           </div>
-          <div class="stat-badge high">
-            <span>81</span>
-            <small>muertes/1000</small>
+          <div class="outlier-stat">
+            <div class="stat-value high">255</div>
+            <div class="stat-label">Muertes/1000 nacidos</div>
           </div>
-          <div class="stat-badge low">
-            <span>50-60%</span>
-            <small>vacunación</small>
+          <div class="outlier-stat">
+            <div class="stat-value low">50-60%</div>
+            <div class="stat-label">Cobertura de vacunación</div>
           </div>
         </div>
-        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed@:4.79&:8.86;&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed@:12.29&:675.73;&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$ner=1800;;;;;;;;&chart-type=bubbles&url=v2" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
-        <p>Este comportamiento atípico puede justificarse por varios factores:</p>
-        <ul class="outlier-factors">
-          <li><i class="fas fa-frown"></i> Pobreza estructural</li>
-          <li><i class="fas fa-clinic-medical"></i> Falta de infraestructura médica</li>
-          <li><i class="fas fa-users-slash"></i> Conflictos sociales</li>
-          <li><i class="fas fa-book"></i> Baja inversión en educación</li>
-        </ul>
+      </div>
+      
+      <div class="outlier-explanation">
+        <h5>Factores explicativos:</h5>
+        <div class="factor-grid">
+          <div class="factor-item">
+            <i class="fas fa-frown"></i>
+            <span>Pobreza estructural</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-clinic-medical"></i>
+            <span>Falta de infraestructura médica</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-users-slash"></i>
+            <span>Conflictos sociales</span>
+          </div>
+          <div class="factor-item">
+            <i class="fas fa-book"></i>
+            <span>Baja inversión en educación</span>
+          </div>
+        </div>
         
-        <p class="outlier-conclusion">Estos elementos hacen que ciertos países se comporten de manera muy diferente al promedio global.</p>
+        <div class="outlier-conclusion">
+          <p>Estas condiciones hacen que algunos países como Níger se aparten notablemente del promedio global, manteniendo altos índices de fertilidad y mortalidad infantil a pesar de las tendencias mundiales.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
     </section>
+
+<!-- Sección de Bibliografía APA Mejorada -->
+<div class="bibliography-container">
+  <div class="analysis-card">
+    <div class="question-header">
+      <i class="fas fa-book"></i>
+      <h3>Bibliografía</h3>
+    </div>
+    <div class="question-answer">
+      <h4 class="bibliography-subtitle">Fuentes de Datos y Gráficos</h4>
+      <ul class="references-list apa-format">
+        <!-- Gráfico 1 -->
+        <li>
+          Gapminder. (2023). <i>Relación entre mortalidad infantil y fertilidad.</i> <a href="https://www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:172;;;;;&chart-type=bubbles&url=v2" target="_blank">[Gráfico interactivo]</a>
+          <span class="reference-consigna"><a href="#relacion_esperada">(Consigna 1.3 - Relación entre variables)</a></span>
+        </li>
+        
+        <!-- Gráfico 2 -->
+        <li>
+          Gapminder. (2023). <i>Valores atípicos de Niger</i>. <a href="https://www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$ner=1800;;;;;;;;&chart-type=bubbles&url=v2" target="_blank">[Gráfico interactivo]</a> 
+          <span class="reference-consigna"><a href="#valores_atipicos">(Consigna 2.3 - Valores atípicos)</a> y <a href="#reflexion">(Consigna 3.3 - Reflexión final sobre valores atípicos)</a></span>
+        </li>
+        
+        <!-- Gráfico 3 -->
+        <li>
+          Gapminder. (2023). <i>Comportamiento inusual Finlandia</i>. <a href="https://www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$size$data$space@=geo&=time;;&scale$domain:null&type:null&zoomed:null;;&y$data$concept=children_per_woman_total_fertility&source=fasttrack&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&x$data$concept=child_mortality_0_5_year_olds_dying_per_1000_born&source=sg&space@=geo&=time;;&scale$domain:null&zoomed:null&type:null;;&color$data$space@=geo&=time;&concept=vacc_rate;&scale$type:null&domain:null&zoomed:null;;&frame$speed:100;&trail$data$filter$markers$fin=1812;;;;;;;;&chart-type=bubbles&url=v2" target="_blank">[Grafico Interactivo]</a>
+          <span class="reference-consigna"><a href="#valores_atipicos">(Consigna 2.3 - Valores atípicos)</a></span>
+        </li>
+      </ul>
+
+      <h4 class="bibliography-subtitle">Referencias Académicas</h4>
+      <ul class="references-list apa-format">
+        <!-- Artículo 1 -->
+        <li>
+          National Research Council (US) Committee on Population; Montgomery MR, Cohen B, editors. (1998). <i>From death to birth: Mortality decline and reproductive change</i>. National Academies Press (US). Chapter 10, Micro and macro effects of infant mortality on fertility: The case of India. <a href="https://www.ncbi.nlm.nih.gov/books/NBK233812/" target="_blank">https://www.ncbi.nlm.nih.gov/books/NBK233812/</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   </main>
 
