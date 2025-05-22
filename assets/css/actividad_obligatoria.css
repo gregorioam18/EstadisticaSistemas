@@ -448,3 +448,44 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* Estilos para cards compactas */
+.compact-cards {
+  margin: 20px 0;
+}
+
+.tight-layout {
+  gap: 12px !important; /* Reducimos el espacio entre cards */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+}
+
+.tight-layout .relationship-card {
+  margin-bottom: 0 !important;
+  height: 100%; /* Aseguramos igual altura */
+}
+
+.tight-layout .rel-header {
+  padding: 12px 15px !important;
+}
+
+.tight-layout .rel-body {
+  padding: 12px 15px !important;
+}
+
+.tight-layout .rel-explanation {
+  font-size: 0.9em !important;
+  line-height: 1.4 !important;
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+  .tight-layout {
+    grid-template-columns: 1fr 1fr !important; /* 2 columnas en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .tight-layout {
+    grid-template-columns: 1fr !important; /* 1 columna en móviles pequeños */
+  }
+}

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/css/footer.css" />
   <link rel="stylesheet" href="../assets/css/top-btn.css" />
   <link rel="stylesheet" href="../assets/css/actividad_elegida.css" />
+  <link rel="stylesheet" href="../assets/css/bibliography.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -27,34 +28,11 @@
 
 
   <main class="contenido">
-    <section class="consigna">
-      <h2>Consigna</h2>
-      <p>Ya analizaron la concentración de NO₂ (μg/m³) con histogramas y gráficos de líneas. Ahora van a <strong>profundizar el análisis</strong> con medidas estadísticas que les permitan interpretar mejor el comportamiento de esta sustancia contaminante.</p>
-      <ol>
-        <li><strong>Apliquen</strong> la función <code>describe()</code> sobre la variable NO₂.</li>
-        <li><strong>Observen</strong> los valores obtenidos y escriban una breve interpretación para cada uno (excepto <em>std</em>, que se trabajará más adelante).</li>
-        <li><strong>Reflexionen en grupo:</strong>
-          <ul>
-            <li>¿Qué información aportan estas medidas sobre la distribución de NO₂?</li>
-            <li>¿Los valores indican niveles que podrían ser preocupantes para la salud o el ambiente?</li>
-            <li>¿Las medidas confirman lo que mostraban los gráficos? Justifiquen.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
 <section class="resolucion">
-  <h2>Resolución</h2>
-  <ol>
+  <h2>Concentración de NO₂</h2>
+  <ul>
     <li>
-      <strong>Aplicación de <code>describe()</code>:</strong>
-      <p>Ejecutá el siguiente código para analizar la variable NO₂ usando Python:</p>
-      <div class="iframe-wrapper">
-        <iframe src="https://trinket.io/embed/python3/6cbb1a02e91e?start=result" allowfullscreen></iframe>
-      </div>          
-    </li>
-    <li>
-      <strong>Interpretación de las medidas:</strong>
+      <strong>Pto 1 y 2: Aplicamos la función describe() sobre NO₂ e interpretamos cada uno.</strong>
       <p>Analizamos cada una de las estadísticas descriptivas obtenidas:</p>
       
       <div class="cards-container">
@@ -62,11 +40,11 @@
         <div class="stat-card">
           <div class="stat-header">
             <h3>count</h3>
-            <span class="stat-value">X</span>
+            <span class="stat-value">413497</span>
           </div>
           <div class="stat-description">
-            <p>Representa el número total de observaciones o muestras recolectadas de concentración de NO₂ en el estudio.</p>
-            <p class="stat-importance">Importancia: Nos indica el tamaño de la muestra y la confiabilidad de los resultados.</p>
+            <p>Representa el número total de observaciones o muestra recolectada.</p>
+            <p class="stat-importance">Importancia: Indica el tamaño de la muestra y la confiabilidad de los resultados.</p>
           </div>
         </div>
     
@@ -77,8 +55,8 @@
             <span class="stat-value">21.40 µg/m³</span>
           </div>
           <div class="stat-description">
-            <p>Es el promedio de todas las concentraciones medidas de NO₂.</p>
-            <p class="stat-importance">Importancia: Indica que en promedio hay una concentración de 21.40 µg/m³, por debajo del límite preocupante (40 µg/m³).</p>
+            <p>Es el promedio de todas las concentraciones medidas.</p>
+            <p class="stat-importance">Importancia: Permite conocer el valor medio y compararlo con límites de referencia (ej., 40 µg/m³).</p>
           </div>
         </div>
     
@@ -89,9 +67,9 @@
             <span class="stat-value">19.10 µg/m³</span>
           </div>
           <div class="stat-description">
-            <p>Desviación estándar: medida de dispersión que indica cuánto varían los datos respecto a la media.</p>
-            <p class="stat-importance">Importancia: Un valor alto (ej. >10) sugeriría mucha variabilidad en las concentraciones, mientras que un valor bajo indicaría mediciones más consistentes.</p>
-            <p>En este caso, al comparar con la media (21.40), podemos evaluar si la dispersión es significativa.</p>
+            <p>La desviación estándar es una medida que nos dice cuánto se alejan los datos del promedio</p>
+            <p class="stat-importance">Importancia: Aunque el valor está entre 10 y 20 (19,10 µg/m³), se puede considerar relativamente alto, lo que indica que hay bastante variabilidad en las mediciones. </p>
+            <p>Esto sugiere que las concentraciones de NO₂ no son muy consistentes.</p>
           </div>
         </div>
     
@@ -102,8 +80,8 @@
             <span class="stat-value">0 µg/m³</span>
           </div>
           <div class="stat-description">
-            <p>Valor mínimo registrado de concentración de NO₂.</p>
-            <p class="stat-importance">Importancia: Nos muestra el límite inferior de las mediciones y ayuda a identificar el rango completo de datos.</p>
+            <p>Es el valor mínimo registrado.</p>
+            <p class="stat-importance">Importancia: Muestra el límite inferior de las mediciones y ayuda a entender el rango total de los datos.</p>
           </div>
         </div>
     
@@ -115,8 +93,8 @@
               <span class="stat-value">8 µg/m³</span>
             </div>
             <div class="stat-description">
-              <p>Primer cuartil: 25% de las mediciones fueron iguales o menores a este valor.</p>
-              <p class="stat-importance">Indica que un cuarto de las muestras tienen concentraciones muy bajas.</p>
+              <p>Primer cuartil: El 25% de las mediciones son iguales o menores a este valor.</p>
+              <p class="stat-importance">Importancia: Indica que una parte significativa de los datos tiene concentraciones bajas.</p>
             </div>
           </div>
     
@@ -126,8 +104,8 @@
               <span class="stat-value">16 µg/m³</span>
             </div>
             <div class="stat-description">
-              <p>Mediana: valor que divide la muestra en dos partes iguales.</p>
-              <p class="stat-importance">Importante porque no se ve afectada por valores extremos. La mitad de las muestras están por debajo de 16 µg/m³.</p>
+              <p>Mediana: Valor central que divide la muestra en dos partes iguales.</p>
+              <p class="stat-importance">Importancia: No se ve afectada por valores extremos; la mitad de las mediciones está por debajo de este valor.</p>
             </div>
           </div>
     
@@ -137,8 +115,8 @@
               <span class="stat-value">29 µg/m³</span>
             </div>
             <div class="stat-description">
-              <p>Tercer cuartil: 75% de las mediciones fueron iguales o menores a este valor.</p>
-              <p class="stat-importance">Solo el 25% de las muestras superan este valor, acercándose al límite de 40 µg/m³.</p>
+              <p>Tercer cuartil: El 75% de las mediciones son iguales o menores a este valor.</p>
+              <p class="stat-importance">Importancia: Sólo el 25% supera este valor, útil para detectar si muchas mediciones se acercan a valores preocupantes.</p>
             </div>
           </div>
         </div>
@@ -150,8 +128,8 @@
             <span class="stat-value">249 µg/m³</span>
           </div>
           <div class="stat-description">
-            <p>Valor máximo registrado de concentración de NO₂.</p>
-            <p class="stat-importance">Importancia: Nos alerta sobre los picos máximos de contaminación que podrían ser preocupantes.</p>
+            <p>Es el valor máximo registrado.</p>
+            <p class="stat-importance">Importancia: Sirve para identificar máximos de contaminación que podrían ser motivo de preocupación.</p>
           </div>
         </div>
       </div>
@@ -172,11 +150,11 @@
                 <span class="insight-icon">📊</span>
                 <h4>Distribución asimétrica</h4>
               </div>
-              <p>La <strong>media (21.41) > mediana (16)</strong> indica una <strong>asimetría positiva</strong>, con una cola larga hacia valores altos. Esto significa que:</p>
+              <p>La <strong>media</strong> (21.41) es mayor que la <strong>mediana</strong> (16), lo que indica una asimetría positiva (cola larga hacia valores altos). <br><br>Esto significa que:</p>
               <ul>
-                <li>Hay más concentraciones bajas que altas</li>
-                <li>Existen valores atípicos elevados que "arrastran" la media hacia arriba</li>
-                <li>El 75% de los datos están por debajo de 29 µg/m³</li>
+                <li>Hay más concentraciones bajas que altas.</li>
+                <li>Hay valores atípicos altos que elevan la media.</li>
+                <li>El 75% de los datos está por debajo de 29 µg/m³.</li>
               </ul>
             </div>
             
@@ -185,11 +163,11 @@
                 <span class="insight-icon">📈</span>
                 <h4>Variabilidad significativa</h4>
               </div>
-              <p>Con una <strong>desviación estándar de 19.11</strong> (89% de la media), encontramos:</p>
+              <p>La <strong>desviación estándar es de 19.11</strong>, lo que representa el 89% de la media, y muestra:</p>
               <ul>
-                <li>Grandes fluctuaciones en las concentraciones</li>
-                <li>Diferentes patrones según ubicación/horario</li>
-                <li>Rango extremo desde 0 hasta 249 µg/m³</li>
+                <li>Grandes fluctuaciones en las concentraciones.</li>
+                <li>Posibles diferencias según ubicación u horario.</li>
+                <li>Un rango de valores que va desde 0 hasta 249 µg/m³.</li>
               </ul>
             </div>
           </div>
@@ -261,7 +239,7 @@
                   <li>Cola larga hacia la derecha (valores altos menos frecuentes)</li>
                   <li>Algunos picos aislados en valores extremos</li>
                 </ul>
-              </div>
+              <img src="https://i.ibb.co/MyyS2J65/descarga.png" alt="Histograma de NO₂" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">              </div>
               
               <div class="confirmation-card">
                 <h4>Consistencia con gráficos de línea:</h4>
@@ -271,7 +249,7 @@
                   <li>Picos ocasionales muy pronunciados</li>
                   <li>Valores base generalmente bajos</li>
                 </ul>
-              </div>
+              <img src="https://i.ibb.co/Zzsmnfyk/Grafico1.png" alt="Gráfico de líneas de NO₂" style="display: block; margin: 0 auto; max-width: 100%; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">              </div>
             </div>
             
             <div class="conclusion-box">
@@ -281,9 +259,26 @@
         </div>
       </div>
     </li>
-  </ol>
+  </ul>
 </section>
-
+<!-- Sección de Bibliografía APA Mejorada -->
+<div class="bibliography-container">
+  <div class="analysis-card">
+    <div class="question-header">
+      <i class="fas fa-book"></i>
+      <h3>Bibliografía</h3>
+    </div>
+    <div class="question-answer">
+      <h4 class="bibliography-subtitle">Referencias Académicas</h4>
+      <ul class="references-list apa-format">
+        <!-- Artículo 1 -->
+        <li>
+          World Health Organization. (2021). <i>WHO global air quality guidelines: Particulate matter (PM₂.₅ and PM₁₀), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide</i>. pp. 115-116 <a href="https://iris.who.int/bitstream/handle/10665/345329/9789240034228-eng.pdf?sequence=1" target="_blank">https://iris.who.int/bitstream/handle/10665/345329/9789240034228-eng.pdf?sequence=1</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
     
   </main>
   
