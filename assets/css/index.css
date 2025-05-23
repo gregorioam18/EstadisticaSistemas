@@ -149,6 +149,26 @@ body {
   text-align: center;
 }
 
+
+.boton-documento {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #3a86ff;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(58, 134, 255, 0.2);
+}
+
+.boton-documento:hover {
+  background-color: #1c60d6;
+  transform: scale(1.05);
+}
+
+
 /* Responsive */
 @media (max-width: 600px) {
   .navbar-title {
