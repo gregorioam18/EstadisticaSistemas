@@ -152,21 +152,30 @@ body {
 
 .boton-documento {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.8rem 1.6rem;
-  background-color: #3a86ff;
-  color: #fff;
-  font-weight: 600;
+  margin-top: 1.8rem;
+  padding: 0.75rem 1.8rem;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1e3a8a;
+  font-weight: 500;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(58, 134, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.boton-documento i {
+  margin-right: 0.5rem;
 }
 
 .boton-documento:hover {
-  background-color: #1c60d6;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #c7d2fe, #93c5fd);
+  color: #172554;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.25);
 }
+
 
 
 /* Responsive */
